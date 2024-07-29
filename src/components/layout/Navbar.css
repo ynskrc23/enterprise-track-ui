@@ -1,0 +1,20 @@
+/* src/components/layout/Navbar.css */
+
+/* Üzerinde bulunan responsive navbar için ekstra stil ekleyebilirsiniz */
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PHBhdGggZD0iTTE4IDJ2Ny44bC01IDUuOCA1LTMuNyIvPjwvc3ZnPg==');
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+/* Özelleştirilmiş görünüm için ek stiller */
+.navbar {
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
