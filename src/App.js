@@ -7,6 +7,8 @@ import CategoryForm from './components/category/CategoryForm';
 import Home from './components/home/Home';
 import SupplierList from "./components/supplier/SupplierList";
 import SupplierForm from "./components/supplier/SupplierForm";
+import ProductList from "./components/product/ProductList";
+import ProductForm from "./components/product/ProductForm";
 
 const App = () => {
     return (
@@ -21,6 +23,9 @@ const App = () => {
                     <Route path="/supplier" element={<SupplierList />} />
                     <Route path="/supplier/add" element={<SupplierForm />} />
                     <Route path="/supplier/edit/:id" element={<SupplierForm />} />
+	                <Route path="/product" element={<ProductList />} />
+                    <Route path="/product/add" element={<ProductForm />} />
+                    <Route path="/product/edit/:id" element={<ProductForm />} />
                 </Routes>
             </div>
         </Router>
