@@ -9,6 +9,8 @@ import SupplierList from "./components/supplier/SupplierList";
 import SupplierForm from "./components/supplier/SupplierForm";
 import ProductList from "./components/product/ProductList";
 import ProductForm from "./components/product/ProductForm";
+import CustomerList from "./components/customer/CustomerList";
+import CustomerForm from "./components/customer/CustomerForm";
 
 const App = () => {
     return (
@@ -26,6 +28,9 @@ const App = () => {
 	                <Route path="/product" element={<ProductList />} />
                     <Route path="/product/add" element={<ProductForm />} />
                     <Route path="/product/edit/:id" element={<ProductForm />} />
+	                <Route path="/customer" element={<CustomerList />} />
+                    <Route path="/customer/add" element={<CustomerForm />} />
+                    <Route path="/customer/edit/:id" element={<CustomerForm />} />
                 </Routes>
             </div>
         </Router>

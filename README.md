@@ -19,3 +19,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![](https://github.com/ynskrc23/enterprise-track-ui/blob/master/image/productlist.PNG)
 ![](https://github.com/ynskrc23/enterprise-track-ui/blob/master/image/productadd.PNG)
 ![](https://github.com/ynskrc23/enterprise-track-ui/blob/master/image/productedit.PNG)
+
+### Customer Sayfası
+![](https://github.com/ynskrc23/enterprise-track-ui/blob/master/image/customerlist.PNG)
+![](https://github.com/ynskrc23/enterprise-track-ui/blob/master/image/customeradd.PNG)
+![](https://github.com/ynskrc23/enterprise-track-ui/blob/master/image/customeredit.PNG)
