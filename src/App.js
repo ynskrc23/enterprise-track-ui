@@ -11,6 +11,8 @@ import ProductList from "./components/product/ProductList";
 import ProductForm from "./components/product/ProductForm";
 import CustomerList from "./components/customer/CustomerList";
 import CustomerForm from "./components/customer/CustomerForm";
+import ShipperList from "./components/shipper/ShipperList";
+import ShipperForm from "./components/shipper/ShipperForm";
 
 const App = () => {
     return (
@@ -22,15 +24,22 @@ const App = () => {
                     <Route path="/category" element={<CategoryList />} />
                     <Route path="/category/add" element={<CategoryForm />} />
                     <Route path="/category/edit/:id" element={<CategoryForm />} />
+
                     <Route path="/supplier" element={<SupplierList />} />
                     <Route path="/supplier/add" element={<SupplierForm />} />
                     <Route path="/supplier/edit/:id" element={<SupplierForm />} />
+
 	                <Route path="/product" element={<ProductList />} />
                     <Route path="/product/add" element={<ProductForm />} />
                     <Route path="/product/edit/:id" element={<ProductForm />} />
+
 	                <Route path="/customer" element={<CustomerList />} />
                     <Route path="/customer/add" element={<CustomerForm />} />
                     <Route path="/customer/edit/:id" element={<CustomerForm />} />
+
+	                <Route path="/shipper" element={<ShipperList />} />
+                    <Route path="/shipper/add" element={<ShipperForm />} />
+                    <Route path="/shipper/edit/:id" element={<ShipperForm />} />
                 </Routes>
             </div>
         </Router>
