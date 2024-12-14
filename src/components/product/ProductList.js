@@ -19,7 +19,7 @@ const ProductList = () => {
 		}
 	};
 
-	const deleteCategory = async (id) => {
+	const deleteProduct = async (id) => {
 		try {
 			await axios.delete(`https://localhost:7086/api/Products/${id}`);
 			setProducts(products.filter(product => product.id !== id));
@@ -65,7 +65,7 @@ const ProductList = () => {
 						<td>{new Date(product.updatedDate).toLocaleDateString()}</td>
 						<td>
 							<Link to={`/product/edit/${product.id}`} className="btn btn-secondary btn-sm">Edit</Link>
-							<button onClick={() => deleteCategory(product.id)}
+							<button onClick={() => deleteProduct(product.id)}
 							        className="btn btn-danger btn-sm ml-2">Delete
 							</button>
 						</td>

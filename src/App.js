@@ -13,6 +13,10 @@ import CustomerList from "./components/customer/CustomerList";
 import CustomerForm from "./components/customer/CustomerForm";
 import ShipperList from "./components/shipper/ShipperList";
 import ShipperForm from "./components/shipper/ShipperForm";
+import RegionForm from "./components/ region/RegionForm";
+import RegionList from "./components/ region/RegionList";
+import TerritoryList from "./components/territory/TerritoryList";
+import TerritoryForm from "./components/territory/TerritoryForm";
 
 const App = () => {
     return (
@@ -40,6 +44,14 @@ const App = () => {
 	                <Route path="/shipper" element={<ShipperList />} />
                     <Route path="/shipper/add" element={<ShipperForm />} />
                     <Route path="/shipper/edit/:id" element={<ShipperForm />} />
+
+                    <Route path="/region" element={<RegionList />} />
+                    <Route path="/region/add" element={<RegionForm />} />
+                    <Route path="/region/edit/:id" element={<RegionForm />} />
+
+                    <Route path="/territory" element={<TerritoryList />} />
+                    <Route path="/territory/add" element={<TerritoryForm />} />
+                    <Route path="/territory/edit/:id" element={<TerritoryForm />} />
                 </Routes>
             </div>
         </Router>

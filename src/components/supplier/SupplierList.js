@@ -19,7 +19,7 @@ const SupplierList = () => {
 		}
 	};
 
-	const deleteCategory = async (id) => {
+	const deleteSupplier = async (id) => {
 		try {
 			await axios.delete(`https://localhost:7086/api/Suppliers/${id}`);
 			setSuppliers(suppliers.filter(supplier => supplier.id !== id));
@@ -69,7 +69,7 @@ const SupplierList = () => {
 						<td>{new Date(supplier.updatedDate).toLocaleDateString()}</td>
 						<td>
 							<Link to={`/supplier/edit/${supplier.id}`} className="btn btn-secondary btn-sm">Edit</Link>
-							<button onClick={() => deleteCategory(supplier.id)}
+							<button onClick={() => deleteSupplier(supplier.id)}
 							        className="btn btn-danger btn-sm ml-2">Delete
 							</button>
 						</td>
