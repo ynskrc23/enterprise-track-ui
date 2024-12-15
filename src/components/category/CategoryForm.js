@@ -71,23 +71,38 @@ const CategoryForm = () => {
             <h4 className="mb-3">{id ? 'Edit Category' : 'Add Category'}</h4>
             {successMessage && <div className="alert alert-success">{successMessage}</div>}
             <form onSubmit={handleSubmit} encType="multipart/form-data">
-                <div className="form-group">
-                    <label>Category Name</label>
-                    <input type="text" name="categoryName" value={form.categoryName} onChange={handleChange} className="form-control" required />
+                <div className="row">
+                    <div className="col-md-6 mb-3">
+                        <div className="form-group">
+                            <label>Category Name</label>
+                            <input type="text" name="categoryName" value={form.categoryName} onChange={handleChange}
+                                   className="form-control" required/>
+                        </div>
+                    </div>
+                    <div className="col-md-6 mb-3">
+                        <div className="form-group">
+                            <label>Description</label>
+                            <input type="text" name="description" value={form.description} onChange={handleChange}
+                                   className="form-control" required/>
+                        </div>
+                    </div>
+                    <div className="col-md-12 mb-3">
+                        <div className="form-group">
+                            <label>Picture</label>
+                            <input type="file" name="picture" onChange={handleFileChange} className="form-control"/>
+                            {form.picture && typeof form.picture === 'string' ? (
+                                <img src={`https://localhost:7086/Uploads/Categories/${form.picture}`} alt="Current"
+                                     className="img-fluid mt-2" style={{width: '100px'}}/>
+                            ) : (
+                                form.picture &&
+                                <img src={URL.createObjectURL(form.picture)} alt="Selected"
+                                     className="img-fluid mt-2"
+                                     style={{width: '100px'}}/>
+                            )}
+                        </div>
+                    </div>
                 </div>
-                <div className="form-group">
-                    <label>Description</label>
-                    <input type="text" name="description" value={form.description} onChange={handleChange} className="form-control" required />
-                </div>
-                <div className="form-group">
-                    <label>Picture</label>
-                    <input type="file" name="picture" onChange={handleFileChange} className="form-control" />
-                    {form.picture && typeof form.picture === 'string' ? (
-                        <img src={`https://localhost:7086/Uploads/Categories/${form.picture}`} alt="Current" className="img-fluid mt-2" style={{ width: '100px' }} />
-                    ) : (
-                        form.picture && <img src={URL.createObjectURL(form.picture)} alt="Selected" className="img-fluid mt-2" style={{ width: '100px' }} />
-                    )}
-                </div>
+
                 <button type="submit" className="btn btn-primary mt-2">
                     {form.id ? 'Update Category' : 'Add Category'}
                 </button>
