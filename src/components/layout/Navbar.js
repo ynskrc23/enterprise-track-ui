@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
-import RegionForm from "../ region/RegionForm";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +46,9 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/employee">Employee</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/order">Order</Link>
                         </li>
                     </ul>
                 </div>

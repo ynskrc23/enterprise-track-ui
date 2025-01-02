@@ -19,6 +19,8 @@ import TerritoryList from "./components/territory/TerritoryList";
 import TerritoryForm from "./components/territory/TerritoryForm";
 import EmployeeList from "./components/employee/EmployeeList";
 import EmployeeForm from "./components/employee/EmployeeForm";
+import OrderForm from "./components/order/OrderForm";
+import OrderList from "./components/order/OrderList";
 
 const App = () => {
     return (
@@ -58,6 +60,10 @@ const App = () => {
                     <Route path="/employee" element={<EmployeeList />} />
                     <Route path="/employee/add" element={<EmployeeForm />} />
                     <Route path="/employee/edit/:id" element={<EmployeeForm />} />
+
+                    <Route path="/order" element={<OrderList />} />
+                    <Route path="/order/add" element={<OrderForm />} />
+                    <Route path="/order/edit/:id" element={<OrderForm />} />
                 </Routes>
             </div>
         </Router>
